@@ -2,7 +2,7 @@
 <html manifest="" lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>mapp</title>
+    <title>rApp</title>
     <style type="text/css">
         /**
          * Example of an initial loading indicator.
@@ -67,8 +67,24 @@
     <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
     <script id="phonegap" type="text/javascript" src="cordova-1.5.0.js"></script>
     <script type="text/javascript">
+    function alertDismissed() {
+	    // do something
+	}
     	document.addEventListener("deviceready", function () {
-	      alert('Our first PhoneGap app');
+    		// Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
+    		//
+    		
+
+    		navigator.notification.alert(
+    		    'You are the winner!',  // message
+    		    alertDismissed,         // callback
+    		    'Game Over',            // title
+    		    'Done'                  // buttonName
+    		);
+
+    		// BlackBerry (OS 4.6) / webOS
+    		//
+    		navigator.notification.alert('You are the winner!');
 	    }, false);
     </script>
 </head>

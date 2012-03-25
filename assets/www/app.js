@@ -5,7 +5,7 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    name: 'mapp',
+    name: 'rApp',
 
     requires: [
         'Ext.MessageBox'
@@ -28,7 +28,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('mapp.view.Main'));
+        Ext.Viewport.add(Ext.create('rApp.view.Main'));
     },
 
     onUpdated: function() {

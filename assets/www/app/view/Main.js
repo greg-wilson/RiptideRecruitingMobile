@@ -1,4 +1,4 @@
-Ext.define("mapp.view.Main", {
+Ext.define("rApp.view.Main", {
     extend: 'Ext.tab.Panel',
     requires: ['Ext.TitleBar'],
     
